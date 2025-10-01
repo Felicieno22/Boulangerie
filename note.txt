@@ -1,0 +1,5 @@
+je vais faire le vente de produit.
+Mon plans comme celle ci : mettre d'abord : shop dans le headers , ensuite dans shop se presente tous les produits 
+avec le PrixVente , et en bas s'ecrit : acheter , apres le bouton clique , il y a un petit formulaire de mail
+ et mdp de client , et l'achat de ce produit revient au client qui fait le login de son formulaire ,
+  et va inserer dans commandeproduit

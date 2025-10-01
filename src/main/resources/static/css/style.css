@@ -1,0 +1,236 @@
+/* Variables globales - Thème Boulangerie */
+:root {
+    --primary-color: #C77B43;     /* Marron pain doré */
+    --secondary-color: #8B4513;   /* Marron pain cuit */
+    --warning-color: #FFA500;     /* Orange chaleureux */
+    --danger-color: #B22222;      /* Rouge brique */
+    --hover-color: #FFE4B5;       /* Beige clair */
+    --bg-light: #FFF8DC;         /* Crème pâle */
+    --text-primary: #4A3728;     /* Marron foncé */
+    --text-secondary: #6B4423;   /* Marron moyen */
+    --border-radius: 8px;
+    --box-shadow: 0 2px 8px rgba(139, 69, 19, 0.15);
+}
+
+/* Style général */
+body {
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Conteneur principal */
+.main-content {
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+/* Cartes */
+.card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: none;
+    margin-bottom: 1.5rem;
+    border-top: 3px solid var(--primary-color);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Formulaires */
+.form-control {
+    border-radius: var(--border-radius);
+    border: 1px solid #D2B48C;
+    padding: 0.75rem;
+    background-color: #FFFAF0;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(199, 123, 67, 0.25);
+    background-color: #FFF;
+}
+
+.form-label {
+    color: var(--text-primary);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Boutons */
+.btn {
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn i {
+    font-size: 1.1em;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 2px 4px rgba(199, 123, 67, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(199, 123, 67, 0.4);
+}
+
+.btn-secondary {
+    background-color: #8B7355;
+    color: white;
+    box-shadow: 0 2px 4px rgba(139, 115, 85, 0.3);
+}
+
+.btn-secondary:hover {
+    background-color: #6B5842;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(139, 115, 85, 0.4);
+}
+
+.btn-warning {
+    background-color: var(--warning-color);
+    color: #000;
+    box-shadow: 0 2px 4px rgba(255, 165, 0, 0.3);
+}
+
+.btn-warning:hover {
+    background-color: #FF8C00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 165, 0, 0.4);
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    color: white;
+    box-shadow: 0 2px 4px rgba(178, 34, 34, 0.3);
+}
+
+.btn-danger:hover {
+    background-color: #8B0000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(178, 34, 34, 0.4);
+}
+
+/* Tableaux */
+.table {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.table thead th {
+    background-color: var(--primary-color);
+    color: white;
+    border-bottom: none;
+    padding: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.table tbody tr:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.01);
+}
+
+.table td {
+    padding: 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #DEB887;
+}
+
+/* Actions dans les tableaux */
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.action-buttons .btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.875rem;
+    min-width: 100px;
+}
+
+/* Badges */
+.badge {
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background-color: #DEB887;
+    color: var(--text-primary);
+}
+
+/* Recherche avancée */
+#rechercheAvancee {
+    transition: var(--transition);
+}
+
+#rechercheAvancee.show {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 1rem;
+        margin: 1rem;
+    }
+    
+    .table-responsive {
+        margin-bottom: 1rem;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .action-buttons .btn {
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .card-title {
+        font-size: 1.25rem;
+    }
+}
